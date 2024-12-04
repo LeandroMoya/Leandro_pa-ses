@@ -62,7 +62,7 @@
 }
 
 .info_aplicacion{
-    width: 47%;
+    width: 74%;
     padding: 3%;
     background-color: var(--fondo_blanco);
     backdrop-filter: blur(8px);
@@ -592,6 +592,10 @@
 }
 
 @media (min-width: 650px) {
+
+    .info_aplicacion{
+    width: 47%;
+    }
     
     #bandera{
         width: 225px;
