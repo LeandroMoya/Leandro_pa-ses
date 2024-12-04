@@ -455,7 +455,7 @@
 }
 
 .cuerpo{
-    background-image: url(/imagenes/fondo_buscardor.jpg);
+    background-image: url(imagenes/fondo_buscardor.jpg);
     background-size: cover;
     height: 100%;
 }
