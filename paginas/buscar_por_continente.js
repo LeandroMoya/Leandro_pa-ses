@@ -22,6 +22,7 @@ var paises = JSON.parse(localStorage.getItem("paises"));
             let mapa = paises.map(pais_consulta => ({
                 name: pais_consulta.name.common,
                 capital: pais_consulta.capital,
+                region : pais_consulta.region,
                 population: pais_consulta.population,
                 flags: pais_consulta.flags.png,
                 languages : pais_consulta.languages
