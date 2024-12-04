@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de países</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <meta name="description" content="Explora todos los países del mundo con información detallada sobre su población, capital, idioma, moneda y más.">
+    <meta name="keywords" content="países, información de países, capitales, banderas">
+    <meta name="author" content="Leandro Moya Rodríguez">
+</head>
+<body class="cuerpo">
+
+    <header>
+        <h1 class="titulo_1">Buscador de países</h1>
+        <nav class="barra_navegacion">
+            <img class="icono_menu" src="/imagenes/iconos/barra-de-menus.png" alt="Este es el icono del menú hamburgesa">
+            <div class="barra_lateral">
+                <img class="icono_salir" src="/imagenes/iconos/cerrar.png" alt="Este es el icono para salir de menú deplegable">
+
+                <a class="enlace" href="/index.html">Inicio</a>
+                <p class="ceparador">|</p>
+                <a class="enlace" href="#">Buscar por nombre</a>
+                <p class="ceparador">|</p>
+                <a class="enlace" href="/paginas/buscar_por_continente.html">Buscar por continente</a> 
+            </div>
+        </nav>
+
+    </header>
+    <main class="principal">
+       <section class="seccion">
+        <article>
+            <div id="fondo_modal">
+                <div id="modal">
+                    <div class="contenedor_bandera">
+                        <img id="bandera"  alt="Esta es la bandera de un país">
+                    </div>
+
+                    <div class="contenedor_info_pais borde_superior">
+                        <img class="icono_info" src="/imagenes/iconos/lenguaje.png" alt="">  
+                        <p id="lenguaje" class="info_pais"></p>
+                    </div>
+
+                    <div class="contenedor_info_pais borde_superior">
+                        <img class="icono_info" src="/imagenes/iconos/país.png" alt="">  
+                        <p id="pais" class="info_pais"></p>
+                    </div>
+
+                    <div class="contenedor_info_pais borde_superior">
+                        <img class="icono_info" src="/imagenes/iconos/Capital.png" alt="">  
+                        <p id="capital" class="info_pais "></p>
+                    </div>
+                    
+                    <div class="contenedor_info_pais borde_superior">
+                       <img class="icono_info" src="/imagenes/iconos/gente.png" alt=""> <p id="poblacion" class="info_pais "></p>
+                    </div>
+                    
+                    <div class="contenedor_btn_salir">
+                        <button id="btn_salir">Salir</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </article>
+            <article class="contenedor_buscador">
+                    <input id="buscador" type="search" placeholder="Buscar">
+                    <button class="btn_buscar">
+                        Buscar
+                    </button>
+            </article>
+            <article>
+                <h2 class="titulo_2">Países</h2>
+                <div id = "contenedor_paises">
+
+                </div>
+            </article>
+       </section>
+
+    </main>
+    <script src="/script.js"></script>
+    <script src="buscar_pais.js"></script>
+</body>
+</html>

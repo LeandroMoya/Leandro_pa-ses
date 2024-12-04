@@ -1,0 +1,671 @@
+:root{
+    --color_negro: black;
+    --btn_gris: rgb(42, 39, 39);
+    --color_blanco:  white;
+    --fondo_negro:  rgba(0, 0, 0, 0.553);
+    --fondo_blanco: rgba(255, 255, 255, 0.531);
+    --fondo_encabezado: rgba(255, 255, 255, 0.538);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.imagen_fondo{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: -1;
+}
+
+#fondo_modal{
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    background-color: var(--fondo_negro);
+    backdrop-filter: blur(1.8px);
+    z-index: 4;
+    display: none;
+}
+
+#bandera{
+    width: 125px;
+    height: 75px;
+    margin: 5% 0%;
+    box-shadow: 2px 2px 10px  var(--fondo_negro);
+}
+
+.info_pais{
+    padding: 3% 10%;
+    padding-right: 0%;
+}
+
+.borde_superior{
+    border-top: 2px solid gray;
+}
+
+.nombre_pais{
+    display: inline;
+    line-height: 190%;
+    margin: 1%;
+    padding-left: 2%;
+}
+
+.contenedor_info_aplicacion{
+    display: flex;
+    justify-content: center;
+
+}
+
+.info_aplicacion{
+    width: 47%;
+    padding: 3%;
+    background-color: var(--fondo_blanco);
+    backdrop-filter: blur(8px);
+}
+
+#contenedor_paises>:first-child{
+    margin-top: 0%;
+}
+
+#contenedor_paises>:last-child{
+    margin-bottom: 0%;
+}
+
+#contenedor_paises{
+    height: 500px;
+    overflow-y: scroll;
+} 
+
+#contenedor_paises::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.254);
+
+    border-radius: 4px;
+}
+
+#contenedor_paises::-webkit-scrollbar-thumb
+{
+    background: var(--color_negro);
+    height: 10%;
+    border-radius: 4px;
+}
+
+.contenedor_btn_salir{
+    display: flex;
+    justify-content: end;
+}
+
+#nombre_region{
+    appearance: none;
+}
+
+#btn_salir{
+    padding: 2%;
+    border-radius: 10px;
+    margin-right: 3%;
+    font-size: 1.5rem;
+   background-color:var(--btn_gris) ;
+   color: var(--color_blanco);
+}
+
+.btn_mostrar_pais{
+    margin: 0%;
+    background-color:var(--btn_gris) ;
+    color: var(--color_blanco);
+    padding: .5% 2%;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.contenedor_info_pais{
+    display: flex;
+}
+
+.icono_info{
+    width: 10%;
+    height: 10%;
+    margin: 1% 0%;
+    margin-left: 5%;
+}
+
+#modal{
+    z-index: 5;
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: fit-content;
+    background-color: var(--color_blanco);
+    border-radius: 20px;
+    padding-bottom: 2.5%;
+}
+
+#america{
+    position: absolute;
+    width: 90px;
+    left: 2%;
+    bottom: 5%;
+    clip-path: 
+    polygon(
+        10% 10%, 
+        15% 10%,
+
+        35% 10%,
+        50% 4%,
+
+        60% 1%,
+        62% 0%,
+
+        100% 2%,
+        100% 20%,
+
+        55% 50%,
+        60% 100%,
+
+        45% 30%,
+        75% 65%,
+
+        85% 70%,
+        60% 100%,
+
+        50% 80%, 
+        40% 70%, 
+
+        10% 30%,
+        0% 30%);
+}
+
+#antartida{
+    position: absolute;
+    width: 50px;
+    top: 2%;
+    left: 30%;
+    clip-path: 
+    polygon(
+        20% 30%, 
+        30% 5%,
+
+        60% 0%,
+        100% 30%,
+
+        100% 70%,
+        70% 100%, 
+
+        40% 100%, 
+        5% 70%, 
+
+        5% 30%);
+}
+
+#africa{
+    position: absolute;
+    width: 65px;
+    right: 35%;
+    bottom: 10%;
+
+    clip-path:
+     polygon(
+        20% 2%, 
+        70% 0%,
+
+        100% 40%, 
+        90% 70%,
+
+        70% 100%, 
+        50% 100%,
+
+        25% 50%, 
+        4% 50%, 
+        
+        0% 5%
+        );
+}
+
+#europa{
+    position: absolute;
+    width: 60px;
+    right: 32%;
+    top: 9%;
+
+    clip-path: 
+    polygon(
+        30% 20%, 
+        70% 0%,
+
+        100% 30%, 
+        100% 70%,
+
+        95% 90%, 
+        65% 80%,
+
+        60% 100%, 
+        30% 100%,
+
+        0% 90%,
+        10% 50%,
+
+        18% 30%);
+    transform: rotate(-10deg);
+}
+
+.agrandar:hover{
+    transform: scale(1.03);
+}
+
+#europa:hover{
+    transform:  scale(1.03) rotate(-10deg);
+}
+
+#asia{
+    position: absolute;
+    width: 107px;
+    right: 0%;
+    top: 0%;
+    clip-path: 
+    polygon(
+        10% 4%,
+        20% 0%,
+        
+        40% 6%,
+        68% 8%,
+
+        70% 2%, 
+        90% 10%,
+
+        60% 67%,
+        90% 10%,
+
+        90% 20%,
+        100% 20%,
+
+        100% 30%, 
+        80% 55%,
+
+        85% 97%,
+        70% 97%,
+
+        56% 94%,
+        40% 60%,
+
+        31% 78%,
+        28% 70%,
+
+        15% 55%,
+        5% 30%, 
+
+        5% 30%,
+        3% 20%,
+        
+        0% 20%,
+        0% 10%);
+}
+
+#oceania{
+    position: absolute;
+    width: 80px;
+    bottom: -1%;
+    right: 0%;
+    clip-path: 
+    polygon(
+        30% 9%, 
+        60% 0%,
+
+        60% 30%, 
+        62% 70%,
+
+        55% 90%, 
+        50% 90%,
+
+        30% 70%,
+
+        0% 70%, 
+        6% 30%);
+}
+
+.contenedor_continente{
+    position: relative;
+    width: 300px; 
+    height: 150px; 
+    background-color: rgba(0, 0, 0, 0.62);  
+}
+
+.pais{
+    width: 100%;
+    margin: 4% 0%;
+    border-radius: 20px;
+    background-color: rgba(139, 134, 134, 0.565);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.centrar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.513);
+}
+
+#buscador, #nombre_region{
+    padding: 1%;
+    width: 75%;
+    margin: 0%;
+    border-radius: 15px 0px 0px 15px;
+}
+
+#nombre_region{
+    width: 25%;
+}
+
+.contenedor_buscador{
+    display: flex;
+    justify-content: center;
+}
+
+.btn_buscar{
+    padding: 1%;
+    width: 15%;
+    font-size: 1.2;
+    position: relative;
+    border-radius: 0px 15px 15px 0px;
+    background-color: var(--btn_gris);
+    color: var(--color_blanco);
+}
+
+#btn_buscar_region{
+    padding: 2% 3%;
+    width: 20%;
+}
+
+.btn_buscar{
+    width: 25%;
+}
+
+.m-b{
+    margin-bottom: 2%;
+}
+
+.contenedor_bandera{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo_2, .titulo_3{
+    text-align: center;
+    margin: 3% 0%;
+}
+
+.barra_navegacion{
+    padding: 1% 0%;
+    background-color: var(--color_negro);
+    display: flex;
+    justify-content: end;
+} 
+
+.titulo_1{
+    text-align: center;
+    padding: 3% 0%;
+    background-color: var(--fondo_encabezado);
+    backdrop-filter: blur(8px);
+    background-size: cover;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.seccion{
+    width: 80%;
+    background-color: var(--fondo_encabezado);
+    padding: 5% 3%;
+    box-shadow: 2px 2px 15px rgb(26, 25, 25);
+}
+
+.icono_menu,.icono_salir{
+    display: block;
+    width: 10%;
+    align-self: flex-end;
+}
+
+.icono_salir{
+    filter: invert(1);
+}
+
+.icono_menu{
+    margin-right:8%;
+}
+
+.enlace{
+    display: block;
+    margin: 20% 0%;
+    text-decoration: none;
+    color: var( --color_blanco);
+}
+
+.ceparador{
+    display: none;
+    color: var( --color_blanco);
+}
+
+.cuerpo{
+    background-image: url(/imagenes/fondo_buscardor.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+.barra_lateral{
+    top: 0%;
+    bottom: 0%;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.595);
+    backdrop-filter: blur(5px);
+    height: 100%;
+    left: 0%;
+    width: 65%;
+    padding: 10%;
+    padding-left: 5%;
+    z-index: 3;
+}
+
+.visible{
+    display: block;
+}
+
+
+@media (min-width: 500px) {
+
+    .btn_buscar{
+        font-size: .8rem;
+    }
+    
+    *{
+        font-size: 1rem;
+    }
+
+    .titulo_1{
+        font-size: 3rem;
+    }
+
+    .titulo_2{
+        font-size: 2rem;
+    }
+
+    .seccion{
+        width: 50%;
+    }
+
+    .barra_navegacion{
+        padding: 2% 0%;     
+    } 
+
+    .barra_lateral{
+        background-color: var(--color_negro);
+        height: fit-content;
+        padding: 0%;
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .info_pais{
+        font-size: 1.4rem;
+    }
+    
+    .ceparador{
+        display: block;
+    }
+
+    .icono_menu,.icono_salir{
+        display: none;
+    }
+    .icono{
+        display: none;
+    }
+
+    .enlace{
+        text-decoration: none;
+        margin: 0%;
+    }
+}
+
+
+@media (min-width: 530px) {
+    #america{
+        width: 160px;
+        left: 2%;
+        bottom: 5%;
+    }
+
+    
+    #modal{
+        left: 20%;
+        width: 65%;
+        top: 10%;
+        padding-bottom: 1%;
+        border-radius: 30px;
+    }
+    
+    #antartida{
+        width: 80px;
+        top: 1%;
+        left: 30%;
+    }
+    
+    #africa{
+        width: 100px;
+        right: 40%;
+        bottom: 10%;
+    }
+    
+    #europa{
+        width: 110px;
+        right: 35%;
+        top: 12%;
+        transform: rotate(-10deg);
+    }
+    
+    #asia{
+        width: 200px;
+        right: 2%;
+        top: 2%;
+    }
+    
+    #oceania{
+        width: 110px;
+        bottom: -1%;
+        right: 20%;
+    }
+    
+    .contenedor_continente{
+        width: 550px; 
+        height: 250px; 
+    }
+}
+
+@media (min-width: 650px) {
+    
+    #bandera{
+        width: 225px;
+        height: 125px;
+    }
+
+    
+    #modal{
+        left: 29%;
+        width: 45%;
+        top: 15%;
+        padding-bottom: 1%;
+        border-radius: 30px;
+    }
+
+}
+
+@media (min-width: 1250px) {
+    .btn_buscar{
+        font-size: 1.2rem;
+    }
+
+    *{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #america{
+        width: 360px;
+        bottom: 5%;
+    }
+    
+    #antartida{
+        width: 150px;
+        top: 1%;
+        left: 32%;
+    }
+    
+    #africa{
+        width: 210px;
+        right: 40%;
+        bottom: 13%;
+    }
+    
+    #europa{
+        width: 230px;
+        right: 35%;
+        top: 5%;
+        transform: rotate(-10deg);
+    }
+    
+    .agrandar:hover{
+        transform: scale(1.03);
+    }
+    
+    #europa:hover{
+        transform:  scale(1.03) rotate(-10deg);
+    }
+    
+    #asia{
+        width: 450px;
+        right: .4%;
+        top: 0%;
+    }
+    
+    #oceania{
+        width: 210px;
+        bottom: 0%;
+        right: 20%;
+    }
+    
+    .contenedor_continente{
+        width: 1200px; 
+        height: 500px; 
+    }
+}
